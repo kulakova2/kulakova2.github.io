@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>СНТ СН №2 им. А.А. Кулакова</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on СНТ СН №2 им. А.А. Кулакова</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Mon, 07 Apr 2025 23:10:35 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Плюсы и минусы предложенных решений</title>
+      <link>http://localhost:1313/posts/compare/</link>
+      <pubDate>Mon, 07 Apr 2025 23:10:35 +0300</pubDate>
+      <guid>http://localhost:1313/posts/compare/</guid>
+      <description>&lt;h2 id=&#34;описание&#34;&gt;Описание&lt;/h2&gt;
+&lt;p&gt;Ниже приведены варианты&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

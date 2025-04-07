@@ -1,0 +1,7 @@
+baseURL = 'https://kulakova2.ru/'
+defaultContentLanguage = 'ru'
+defaultContentLanguageInSubdir = true
+disableDefaultLanguageRedirect = true
+languageCode = 'ru-RU'
+title = 'СНТ СН №2 им. А.А. Кулакова'
+theme = 'papermod'
