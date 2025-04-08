@@ -3,281 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Характеристики участников обсуждения электричества в СНТ</title>
+    <title>Характеристики участников обсуждения</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .header {
-            background-color: #2E7D32;
-            color: white;
-            padding: 25px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-            margin-bottom: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .container {
-            background-color: white;
-            padding: 0;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2E7D32;
-            background-color: #E8F5E9;
-            padding: 15px;
-            margin: 0;
-            font-size: 22px;
-        }
-        .participant {
-            padding: 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .participant:last-child {
-            border-bottom: none;
-        }
-        .role {
-            display: inline-block;
-            background-color: #C8E6C9;
-            color: #1B5E20;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 14px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        h3 {
-            color: #1B5E20;
-            margin: 0 0 10px 0;
-            font-size: 20px;
-        }
-        .characteristics {
-            margin-left: 20px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 15px;
-        }
-        li:before {
-            content: "•";
-            color: #2E7D32;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        .goal {
-            background-color: #F1F8E9;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        .goal:before {
-            content: "Цель: ";
-            font-weight: bold;
-            font-style: normal;
-        }
-        .summary {
-            background-color: #E3F2FD;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th {
-            background-color: #2E7D32;
-            color: white;
-            padding: 10px;
-            text-align: left;
-        }
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        .date {
-            font-size: 14px;
-            color: #666;
-            text-align: right;
-            margin-top: 20px;
+        h1 {
+            color: #2e7d32;
+            text-align: center;
+            border-bottom: 2px solid #81c784;
+            padding-bottom: 10px;
+        }
+        .participant {
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .participant-name {
+            width: 100%;
+            font-weight: bold;
+            color: #1b5e20;
+            margin-bottom: 5px;
+        }
+        .tone {
+            width: 30%;
+            padding-right: 10px;
+        }
+        .goal {
+            width: 99%;
+        }
+        .tone-label {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.65em;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .neutral {
+            background-color: #bbdefb;
+            color: #0d47a1;
+        }
+        .constructive {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+        .aggressive {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
+        .sarcastic {
+            background-color: #d1c4e9;
+            color: #4527a0;
+        }
+        .emotional {
+            background-color: #ffecb3;
+            color: #ff8f00;
+        }
+        .official {
+            background-color: #e0e0e0;
+            color: #424242;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Характеристики участников обсуждения электричества в СНТ</h1>
+    <h1>Характеристики участников обсуждения</h1>
+
+    <div class="participant">
+        <div class="participant-name">Степан</div>
+        <div class="tone">
+            <span class="tone-label constructive">конструктивный</span>
+            <span class="tone-label neutral">нейтральный</span>
+        </div>
+        <div class="goal">Продвижение идеи передачи ВВ линий Россетям, ускорение решения проблемы с электричеством</div>
     </div>
-    
-    <div class="container">
-        <h2>Основные участники дискуссии</h2>
-        
-        <div class="participant">
-            <div class="role">Главный инициатор и эксперт</div>
-            <h3>1. Степан</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Технически подкован</strong> – разбирается в вопросах электричества, трансформаторов, подключений</li>
-                    <li><strong>Предлагает решения</strong> – продвигает идею передачи ВВ линий Россетям</li>
-                    <li><strong>Организатор</strong> – пытается собрать ОСС, проводит опросы</li>
-                    <li><strong>Спокойный, но настойчивый</strong> – терпеливо отвечает на повторяющиеся вопросы</li>
-                    <li><strong>Недостаток:</strong> не всегда четко объясняет финансовые выгоды для всех членов СНТ</li>
-                </ul>
-                <div class="goal">Добиться передачи ВВ линий и увеличения мощности</div>
-            </div>
+
+    <div class="participant">
+        <div class="participant-name">Anna Valeryevna Matveeva</div>
+        <div class="tone">
+            <span class="tone-label official">официальный</span>
+            <span class="tone-label aggressive">обвинительный</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Скептик-аналитик</div>
-            <h3>2. Наталья Яковлева</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Детально разбирает предложения</strong> – задает много уточняющих вопросов</li>
-                    <li><strong>Сомневается в выгодах</strong> – не уверена, что передача линий решит проблемы всех</li>
-                    <li><strong>Прагматична</strong> – хочет понять, кто и что получит в итоге</li>
-                    <li><strong>Активная</strong> – участвует на всех этапах обсуждения</li>
-                </ul>
-                <div class="goal">Убедиться, что решение справедливо для всех</div>
-            </div>
+        <div class="goal">Защита своей позиции как избранного председателя, критика бывшего правления, противодействие передаче сетей</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Е.Игорь</div>
+        <div class="tone">
+            <span class="tone-label constructive">аналитический</span>
+            <span class="tone-label sarcastic">саркастичный</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Посредник и разъяснитель</div>
-            <h3>3. Kсения</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Логично структурирует информацию</strong> – пытается объяснить сложные моменты простыми словами</li>
-                    <li><strong>Поддерживает диалог</strong> – отвечает на вопросы других участников</li>
-                    <li><strong>Нейтральна</strong> – не агрессивна, но и не слепо доверяет предложениям</li>
-                    <li><strong>Финансово осторожна</strong> – не хочет, чтобы все платили за интересы немногих</li>
-                </ul>
-                <div class="goal">Найти компромиссное решение</div>
-            </div>
+        <div class="goal">Технический анализ ситуации, поддержка Анны Матвеевой, критика схемы Степана</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Юрий</div>
+        <div class="tone">
+            <span class="tone-label aggressive">агрессивный</span>
+            <span class="tone-label sarcastic">саркастичный</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Юридический критик</div>
-            <h3>4. Надежда</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Акцентирует внимание на юридических рисках</strong> – напоминает о судебных спорах</li>
-                    <li><strong>Недоверчива</strong> – сомневается в легитимности решений без судебного урегулирования</li>
-                    <li><strong>Прямая</strong> – четко выражает позицию, не боится спорить</li>
-                    <li><strong>Консервативна</strong> – предлагает сначала решить вопрос с председателем</li>
-                </ul>
-                <div class="goal">Избежать незаконных решений</div>
-            </div>
+        <div class="goal">Резкая критика Степана и Н.Ф. Отсинг, разоблачение "схем" Россетей</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Ирина</div>
+        <div class="tone">
+            <span class="tone-label emotional">эмоциональный</span>
+            <span class="tone-label aggressive">критичный</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Защитник "простых" членов СНТ</div>
-            <h3>5. Светлана</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Эмоциональная</strong> – переживает, что не все получат выгоду</li>
-                    <li><strong>Практичная</strong> – спрашивает: "Что будет с теми, кто не на прямых договорах?"</li>
-                    <li><strong>Недовольна</strong> – считает, что схема выгодна только части участников</li>
-                    <li><strong>Требует четких ответов</strong> – не удовлетворена общими объяснениями</li>
-                </ul>
-                <div class="goal">Добиться справедливого распределения выгод</div>
-            </div>
+        <div class="goal">Выражение недовольства текущей ситуацией, требование справедливого распределения мощности</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Lubimova Elena</div>
+        <div class="tone">
+            <span class="tone-label constructive">конструктивный</span>
+            <span class="tone-label neutral">нейтральный</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Технический консультант</div>
-            <h3>6. VTM trade</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Предоставляет факты</strong> – дает информацию о трансформаторах</li>
-                    <li><strong>Нейтрален</strong> – не вступает в споры, только отвечает на вопросы</li>
-                    <li><strong>Краткий</strong> – пишет по делу, без лишних эмоций</li>
-                </ul>
-                <div class="goal">Дать техническую справку</div>
-            </div>
+        <div class="goal">Поиск компромиссных решений, приведение примеров из других СНТ</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">TatianaS</div>
+        <div class="tone">
+            <span class="tone-label constructive">аналитический</span>
+            <span class="tone-label emotional">эмоциональный</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Жесткий оппонент</div>
-            <h3>7. Юрий</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Критичен</strong> – открыто называет идеи "бредом"</li>
-                    <li><strong>Не верит в легитимность</strong> – считает, что решения будут оспорены</li>
-                    <li><strong>Агрессивный стиль</strong> – использует сарказм (😂)</li>
-                    <li><strong>Нет предложений</strong> – только критика, без альтернатив</li>
-                </ul>
-                <div class="goal">Сорвать предложенные изменения</div>
-            </div>
+        <div class="goal">Поиск четкого плана действий, требование конкретики от обеих сторон</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Наталья Яковлева</div>
+        <div class="tone">
+            <span class="tone-label neutral">нейтральный</span>
+            <span class="tone-label constructive">вопрошающий</span>
         </div>
-        
-        <div class="participant">
-            <div class="role">Сомневающийся прагматик</div>
-            <h3>8. Ольга</h3>
-            <div class="characteristics">
-                <ul>
-                    <li><strong>Финансово ориентирована</strong> – спрашивает: "Сколько это будет стоить?"</li>
-                    <li><strong>Недоверчива</strong> – подозревает "мутные схемы"</li>
-                    <li><strong>Предлагает простой вариант</strong> – "Купим новый транс и забудем"</li>
-                    <li><strong>Скептична к Россетям</strong> – боится, что они навяжут свои условия</li>
-                </ul>
-                <div class="goal">Избежать ненужных затрат</div>
-            </div>
+        <div class="goal">Выяснение деталей предложений, прояснение организационных вопросов</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Светлана</div>
+        <div class="tone">
+            <span class="tone-label aggressive">критичный</span>
+            <span class="tone-label emotional">эмоциональный</span>
         </div>
-        
-        <div class="summary">
-            <h3>Итоговая классификация участников</h3>
-            <table>
-                <tr>
-                    <th>Тип участника</th>
-                    <th>Кто относится</th>
-                </tr>
-                <tr>
-                    <td><strong>Инициаторы изменений</strong></td>
-                    <td>Степан, Kсения</td>
-                </tr>
-                <tr>
-                    <td><strong>Скептики</strong></td>
-                    <td>Наталья Яковлева, Надежда, Ольга</td>
-                </tr>
-                <tr>
-                    <td><strong>Критики</strong></td>
-                    <td>Юрий, Светлана</td>
-                </tr>
-                <tr>
-                    <td><strong>Техподдержка</strong></td>
-                    <td>VTM trade</td>
-                </tr>
-                <tr>
-                    <td><strong>Нейтральные</strong></td>
-                    <td>Елена, Роман, Алексей ✌️, Татьяна А., Наталия</td>
-                </tr>
-            </table>
+        <div class="goal">Выражение недоверия к Россетям и предложениям Степана, защита интересов рядовых членов СНТ</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">LomdariKa</div>
+        <div class="tone">
+            <span class="tone-label aggressive">критичный</span>
+            <span class="tone-label sarcastic">саркастичный</span>
         </div>
-        
-        <div class="date">
-            Дата составления: 7 апреля 2025 г.
+        <div class="goal">Выражение скепсиса по поводу предложений Степана, защита прав членов СНТ</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Dmitriy</div>
+        <div class="tone">
+            <span class="tone-label aggressive">прямолинейный</span>
+            <span class="tone-label sarcastic">саркастичный</span>
         </div>
+        <div class="goal">Критика эмоциональных высказываний, требование ответственности за принятые решения</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Алексей ✌️</div>
+        <div class="tone">
+            <span class="tone-label neutral">нейтральный</span>
+            <span class="tone-label constructive">фактологический</span>
+        </div>
+        <div class="goal">Уточнение технических деталей, приведение примеров из практики</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Anastasia</div>
+        <div class="tone">
+            <span class="tone-label emotional">эмоциональный</span>
+            <span class="tone-label aggressive">критичный</span>
+        </div>
+        <div class="goal">Выражение недоверия к Россетям, предостережение от передачи сетей</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Татьяна</div>
+        <div class="tone">
+            <span class="tone-label constructive">конструктивный</span>
+            <span class="tone-label neutral">нейтральный</span>
+        </div>
+        <div class="goal">Поиск практического решения проблемы, призыв к диалогу</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Виктория Валерьевна</div>
+        <div class="tone">
+            <span class="tone-label aggressive">критичный</span>
+            <span class="tone-label emotional">эмоциональный</span>
+        </div>
+        <div class="goal">Выявление противоречий в аргументации Степана, защита интересов СНТ</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Людмила</div>
+        <div class="tone">
+            <span class="tone-label aggressive">обвинительный</span>
+            <span class="tone-label emotional">эмоциональный</span>
+        </div>
+        <div class="goal">Критика Н.Ф. Отсинг, поддержка Анны Матвеевой</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Kсения</div>
+        <div class="tone">
+            <span class="tone-label constructive">аналитический</span>
+            <span class="tone-label neutral">нейтральный</span>
+        </div>
+        <div class="goal">Поиск объективной информации и документального подтверждения утверждений, ответы на повторяющиеся вопросы</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Надежда</div>
+        <div class="tone">
+            <span class="tone-label constructive">вопрошающий</span>
+            <span class="tone-label neutral">нейтральный</span>
+        </div>
+        <div class="goal">Выяснение юридических аспектов передачи сетей, прояснение процедурных вопросов</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Ольга</div>
+        <div class="tone">
+            <span class="tone-label emotional">эмоциональный</span>
+            <span class="tone-label aggressive">критичный</span>
+        </div>
+        <div class="goal">Выражение опасений по поводу предложений Степана, требование прозрачности</div>
+    </div>
+
+    <div class="participant">
+        <div class="participant-name">Hannochka Бесплатно/вопрос</div>
+        <div class="tone">
+            <span class="tone-label sarcastic">саркастичный</span>
+            <span class="tone-label aggressive">критичный</span>
+        </div>
+        <div class="goal">Критика позиции Анны Матвеевой и ее сторонников, защита прав членов СНТ</div>
     </div>
 </body>
 </html>
