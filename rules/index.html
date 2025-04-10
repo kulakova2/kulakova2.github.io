@@ -16,6 +16,7 @@
         h1 {
             color: #2c3e50;
             text-align: center;
+            font-size: 22px;
         }
         a {
             color: #2980b9;
@@ -36,18 +37,42 @@
             border-left: 4px solid #2980b9;
             margin: 15px 0;
         }
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #0088cc;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            margin: 20px auto;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .telegram-btn:hover {
+            background-color: #0077b5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            text-decoration: none;
+        }
+        .telegram-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            fill: currentColor;
+        }
+        .btn-container {
+            text-align: center;
+            margin: 30px 0;
+        }
     </style>
 </head>
 <body>
     <h1>Правила группы СНТ Кулакова-2</h1>
+
     
-    <p>Оставить заявку на вступление в группу можно по ссылке <a href="https://kulakova2.ru/telegram" target="_blank">https://kulakova2.ru/telegram</a>. Для ускорения рассмотрения заявки сообщите <a href="https://t.me/snt_kulakova2">@snt_kulakova2</a> номер участка и фамилию собственника или иное подтверждение принадлежности к СНТ. Вступая в группу, Вы подтверждаете, что ознакомились с информацией на данной странице.</p>
-    
-    <div class="highlight">
-        <p>Главные новости СНТ публикуются в отдельном Telegram-канале - <a href="https://kulakova2.ru/news" target="_blank">https://kulakova2.ru/news</a>. Подписывайтесь, если хотите быть в курсе.</p>
-    </div>
-    
-    <p><b>Приятного общения! Напоминаем, что в группе не приветствуются:</b></p>
+    <p><b>Не приветствуются:</b></p>
     
     <ul>
         <li>нецензурные выражения, оскорбления, неуважительный тон общения, выяснения отношений - для этих целей можно использовать личные сообщения</li>
@@ -62,10 +87,22 @@
     
     <p>Пожаловаться на сообщение: <strong>!report</strong> или <strong>/report</strong> ответным сообщением</p>
     
+    <div class="btn-container">
+        <a href="https://kulakova2.ru/telegram" class="telegram-btn" target="_blank">
+            <svg class="telegram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+            </svg>
+            Присоединиться к группе в Telegram
+        </a>
+    </div>
+
+    <p>Вступая в группу, Вы подтверждаете, что ознакомились с информацией на данной странице. Для ускорения рассмотрения заявки Вы можете сообщить <a href="https://t.me/snt_kulakova2">@snt_kulakova2</a> номер участка и фамилию собственника или иное подтверждение принадлежности к СНТ. </p>
+
+   
+
     <div class="highlight">
         <ul>
-            <i>Администраторы группы не несут ответственности за содержание сообщений, публикуемых участниками группы и за любой ущерб, который может быть причинен в любой форме.
-            Если у Вас возникают вопросы относительно данных правил, можно адресовать их <a href="https://t.me/snt_kulakova2">@snt_kulakova2</a></i>
+            <i>Администраторы группы не несут ответственности за содержание сообщений, публикуемых участниками группы и за любой ущерб, который может быть причинен в любой форме.</i>
         </ul>
     </div>
 </body>
