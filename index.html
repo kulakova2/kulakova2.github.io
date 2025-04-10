@@ -21,7 +21,6 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden;
         }
         
         body {
@@ -33,7 +32,7 @@
             color: var(--text);
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            max-height: 90%;
             -webkit-font-smoothing: antialiased;
         }
         
@@ -47,8 +46,8 @@
         
         .content {
             flex: 1;
-            overflow-y: auto;
-            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
         }
         
         .links {
@@ -58,6 +57,7 @@
             margin: 2rem auto 0;
             max-width: 420px;
             width: 100%;
+            flex-grow: 1;
         }
         
         a.main-link {
@@ -92,6 +92,7 @@
             padding: 1.5rem 0;
             border-top: 1px solid var(--border);
             margin-top: auto;
+            flex-shrink: 0;
         }
         
         .feedback a {
@@ -112,47 +113,53 @@
         @media (max-width: 640px) {
             body {
                 padding: 1rem;
+                height: auto;
+                min-height: 100vh;
             }
             
             h1 {
                 font-size: 1.5rem;
+                margin-top: 0.5rem;
             }
             
             .links {
                 max-width: 100%;
+                margin: 1rem auto;
+                flex-grow: 0;
+            }
+            
+            .content {
+                min-height: calc(100vh - 100px);
             }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-    
-    <div class="links">
-              
-        <a href="./info" class="main-link" target="_blank">
-            📜 Правила группы
-        </a>
+    <div class="content">    
+        <div class="links">
+            <a href="./info" class="main-link" target="_blank">
+                📜 Правила группы
+            </a>
 
-        <a href="./news" class="main-link" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0088cc">
-                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
-            </svg>
-            Telegram-канал
-        </a>
-        
-        <a href="https://nakarte.me/#m=16/60.39654/30.38115&l=O/W" class="main-link" target="_blank">
-            🗺️ Карта
-        </a>
-        
-        <a href="./rosseti" class="main-link" target="_blank">
-            ⚡ Итоги обсуждения по электроэнергии
-        </a>
+            <a href="./news" class="main-link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                </svg>
+                Telegram-канал
+            </a>
+            
+            <a href="https://nakarte.me/#m=16/60.39654/30.38115&l=O/W" class="main-link" target="_blank">
+                🗺️ Карта
+            </a>
+            
+            <a href="./rosseti" class="main-link" target="_blank">
+                ⚡ Итоги обсуждений по электроэнергии
+            </a>
+        </div>
     </div>
-</div>
 
     <div class="feedback">
         <a href="https://t.me/snt_kulakova2" target="_blank">Обратная связь</a>
     </div>
-
 </body>
 </html>
