@@ -1,126 +1,158 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta http-equiv="refresh" content="3;URL=https://nakarte.me/#m=16/60.39654/30.38115&l=O/W" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СНТ СН №2 им. А.А. Кулакова</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+            --bg-hover: #f9fafb;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f9f9f9;
+            line-height: 1.5;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
-        .header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-            margin-bottom: 20px;
-        }
-        .container {
-            background-color: white;
-            padding: 25px;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+        
         h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        h2 {
-            color: #4CAF50;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 8px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #2E7D32;
-            margin-top: 20px;
-        }
-        .topic {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-left: 4px solid #4CAF50;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-        .question {
-            background-color: #E8F5E9;
-            padding: 12px 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        .conclusion {
-            background-color: #E3F2FD;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 30px;
-            border-left: 4px solid #2196F3;
-        }
-        .highlight {
-            background-color: #FFF9C4;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .date {
-            font-size: 14px;
-            color: #666;
-            text-align: right;
-            margin-top: 30px;
-        }
-        .other {
-            font-size: 14px;
-            color: #07471a;
+            color: var(--text);
             text-align: center;
-            margin-top: 30px;
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 2rem auto 0;
+            max-width: 420px;
+            width: 100%;
+        }
+        
+        a.main-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+            padding: 0.75rem 1.25rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            background: white;
+        }
+        
+        a.main-link:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            color: var(--primary-hover);
+        }
+        
+        a.main-link svg {
+            margin-right: 0.75rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .feedback {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border);
+            margin-top: auto;
+        }
+        
+        .feedback a {
+            display: inline;
+            color: var(--text-light);
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        
+        .feedback a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .links {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>СНТ СН №2 им. А.А. Кулакова</h1>
-    </div>
+    <div class="content">
     
-    <div class="container">
-        <h2>Здесь пока ничего нет, открываем карту...</h2>
-        
-        <!-- <div class="topic">
-            <h3>Тема 1</h3>
-            <ul>
-                <li>Пункт 1</li>
-            </ul>
-        </div>
-        
-        <h2>Вопросы</h2>
-        <div class="question">
-            Вопрос 1
-        </div>
-                
-        <div class="conclusion">
-            <h3>Дисклеймер</h3>
-            <p>Текст</p>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-            </ul>
-        </div>
+    <div class="links">
+              
+        <a href="./info" class="main-link" target="_blank">
+            📜 Правила группы
+        </a>
 
-        <div class="date">
-            7 апреля 2025 г.            
-        </div> -->
+        <a href="./news" class="main-link" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0088cc">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+            </svg>
+            Telegram-канал
+        </a>
+        
+        <a href="https://nakarte.me/#m=16/60.39654/30.38115&l=O/W" class="main-link" target="_blank">
+            🗺️ Карта
+        </a>
+        
+        <a href="./rosseti" class="main-link" target="_blank">
+            ⚡ Итоги обсуждения по электроэнергии
+        </a>
     </div>
+</div>
+
+    <div class="feedback">
+        <a href="https://t.me/snt_kulakova2" target="_blank">Обратная связь</a>
+    </div>
+
 </body>
 </html>
