@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+Disallow: /rules/
+Disallow: /info/
+Disallow: /docs/
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+Sitemap: https://kulakova2.github.io/sitemap.xml
