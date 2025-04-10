@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Итоги обсуждения ситуации с электричеством в СНТ</title>
+    <title>СНТ СН №2 им. А.А. Кулакова</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+            --bg-hover: #f9fafb;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 900px;
@@ -127,6 +139,63 @@
             background-color: #81c784 !important;
             color: white;
             font-weight: bold;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 2rem auto 0;
+            max-width: 420px;
+            width: 100%;
+            flex-grow: 1;
+        }
+        a.back-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-light);
+            padding: 0.75rem 1.25rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            background: white;
+        }
+
+        a.back-link:hover {
+            background-color: var(--bg-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            color: var(--primary-hover);
+        }
+
+        a.back-link svg {
+            margin-right: 0.75rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .feedback {
+            text-align: center;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        .feedback a {
+            display: inline;
+            color: var(--text-light);
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .feedback a:hover {
+            color: var(--primary);
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -323,7 +392,17 @@
             <a href="./participants" target="_blank">Позиции участников обсуждений</a>
         </div>
         <div class="date">
-            Сгенерировано: 8 апреля 2025 г.
+            Актуальность исходных данных: 8 апреля 2025 г.
+        </div>
+    </div>
+
+    <a href="/" class="back-link">
+        ← Вернуться на главную
+    </a>
+
+    <div class="links">
+        <div class="feedback">
+            Обратная связь: <a href="mailto:feedback@kulakova2.ru">email</a> / <a href="https://t.me/snt_kulakova2" target="_blank">telegram</a>
         </div>
     </div>
 </body>
