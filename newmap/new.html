@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Интерактивная карта участков</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    #map { height: 600px; width: 100%; }
+    .leaflet-attribution-flag {
+        display: none;
+        visibility: hidden;
+    }
+    .leaflet-control-attribution.leaflet-control {
+        display: none;
+        visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    // 1. Инициализация карты (центр и масштаб подберите под ваши данные)
+    const map = L.map('map').setView([55.75, 37.61], 15);
+
+    // 2. Добавляем подложку (например, OpenStreetMap)
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    // }).addTo(map);
+
+    // Укажите границы изображения в координатах [юг, запад] и [север, восток]
+const imageBounds = [[55.74, 37.60], [55.76, 37.62]];
+L.imageOverlay('./map.jpg', imageBounds).addTo(map);
+
+    // 3. Загружаем GeoJSON с полигонами
+    fetch('./test.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: {
+            color: '#3388ff', // Цвет границ
+            weight: 2,        // Толщина линий
+            fillOpacity: 0.3  // Прозрачность заливки
+          },
+          onEachFeature: function(feature, layer) {
+            // Всплывающее окно при клике на полигон
+            if (feature.properties) {
+              layer.bindPopup(`<b>Участок ID: ${feature.properties.id || 'N/A'}</b>`);
+            }
+          }
+        }).addTo(map);
+      });
+  </script>
+</body>
+</html>
