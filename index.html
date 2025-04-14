@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,130 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --text: #1f2937;
-            --text-light: #6b7280;
-            --border: #e5e7eb;
-            --bg-hover: #f9fafb;
-        }
-
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.5;
-            color: var(--text);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1 {
-            color: var(--text);
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin: 2rem auto 0;
-            max-width: 420px;
-            width: 100%;
-            flex-grow: 1;
-        }
-
-        a.main-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--primary);
-            padding: 0.75rem 1.25rem;
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            transition: all 0.2s ease;
-            font-weight: 500;
-            background: white;
-        }
-
-        a.main-link:hover {
-            background-color: var(--bg-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-            color: var(--primary-hover);
-        }
-
-        a.main-link svg {
-            margin-right: 0.75rem;
-            width: 1.25rem;
-            height: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .feedback {
-            text-align: center;
-            font-size: 0.875rem;
-            margin-top: 1rem;
-        }
-
-        .feedback a {
-            display: inline;
-            color: var(--text-light);
-            padding: 0;
-            border: none;
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-
-        .feedback a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 1rem;
-                height: auto;
-                min-height: 100vh;
-            }
-
-            .links-container {
-                padding: 1rem 0;
-            }
-
-            .links {
-                max-width: 100%;
-                margin: 1rem auto;
-                flex-grow: 0;
-            }
-
-            .content {
-                min-height: calc(100vh - 100px);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./themes.js"></script>
+    <script type="text/javascript" src="./metrika.js"></script>
 </head>
 
 <body>
@@ -153,7 +33,7 @@
                     </svg>
                     Канал Telegram
                 </a>
-                
+
                 <a href="./info" class="main-link">
                     ℹ Общая информация
                 </a>
@@ -173,33 +53,23 @@
                 <a href="./rosseti" class="main-link">
                     ⚡ Итоги обсуждения по электроэнергии
                 </a>
-                
+
                 <a href="tel:+79893584963" class="main-link">
                     📱 Позвонить на шлагбаум
                 </a>
             </div>
 
             <div class="feedback">
-                Обратная связь: <a href="mailto:feedback@kulakova2.ru">email</a> / <a href="https://t.me/snt_kulakova2" target="_blank">telegram</a>
+                Обратная связь: <a href="mailto:feedback@kulakova2.ru">email</a> / <a href="https://t.me/snt_kulakova2"
+                    target="_blank">telegram</a>
+                <button class="theme-toggle" aria-label="Переключить тему">🌓</button>
             </div>
         </div>
     </div>
+
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/97140853" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+
 </body>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(97140853, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/97140853" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
 </html>
