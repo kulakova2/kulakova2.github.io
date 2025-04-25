@@ -3,6 +3,7 @@ Allow: /
 Disallow: /rules/
 Disallow: /info/
 Disallow: /docs/
+Disallow: /map/
 
 User-agent: MJ12bot
 Disallow: /
