@@ -298,11 +298,11 @@ a.back-link svg {
 }
 
 .weather-icon {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .weather-temp {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     color: var(--primary); 
     min-width: 50px;
