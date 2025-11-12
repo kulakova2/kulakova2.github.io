@@ -5,7 +5,7 @@ async function loadWeather() {
         const lon = 30.381688;
 
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ru`
+            `https://ru.api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ru`
         );
         const data = await response.json();
 
