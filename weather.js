@@ -118,5 +118,7 @@ function getIconFromWWO(code) {
     return icons[code] || '🌤️';
 }
 
-loadWeather();
-setInterval(loadWeather, 3600000);
+document.addEventListener('DOMContentLoaded', () => {
+    loadWeather();
+    setInterval(loadWeather, 3600000);
+});
